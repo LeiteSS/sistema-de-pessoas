@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Consultar";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastre e Consulte Pessoas</h1>
+    <p>Plataforma das pessoas para as pessoas</a></p>
+    <form asp-controller="Home" asp-action="Index">
+        <p>
+            CPF: <input type="text" name="cpf" />
+            @Html.ActionLink("Consultar", "List", "Home", new object { }, new { @class = "btn btn-lg btn-outline-dark" })
+        </p>
+    </form>
+</div>
+<div>
+    <p>
+        @Html.ActionLink("Cadastrar", "Create", "Home", new object { }, new { @class = "btn btn-lg btn-outline-dark" })
+    </p>
+</div>
+
+
+

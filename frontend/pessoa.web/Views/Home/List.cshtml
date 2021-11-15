@@ -1,0 +1,30 @@
+﻿@model IEnumerable<pessoa.web.Models.Pessoa.PessoaViewModelOutput>
+
+@foreach (var pessoa in Model)
+{
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">@Html.DisplayFor(model => pessoa.Nome)</h4>
+            <h2 class="card-title">@Html.DisplayFor(model => pessoa.Cpf)</h2>
+        </div>
+        <div class="card-body">
+            <h3 class="card-text">Endereço</h3>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Logradouro)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Numero)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Cep)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Bairro)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Cidade)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Estado)</p>
+        </div>
+        <div class="card-footer">
+            <h3 class="card-text">Telefone</h3>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.NumeroTelefone)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Ddd)</p>
+            <p class="card-text">@Html.DisplayFor(model => pessoa.Tipo)</p>
+            <button class="btn">
+                @Html.ActionLink("Editar", "Edit", new { id = pessoa.Id }, new { @class = "btn btn-lg btn-outline-warning" }) 
+                @Html.ActionLink("Deletar", "Delete", new { id = pessoa.Id }, new { @class = "btn btn-lg btn-outline-danger" })
+            </button>
+        </div>
+    </div>
+}

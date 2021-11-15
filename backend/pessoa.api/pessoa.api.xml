@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>pessoa.api</name>
+    </assembly>
+    <members>
+        <member name="M:pessoa.api.Controllers.PessoasController.PostPessoa(pessoa.api.Model.Pessoa.PessoaViewModelInput)">
+            <summary>
+            Este serviço permite cadastrar uma pessoa.
+            </summary>
+            <returns>Retorna status 201 e dados da pessoa</returns>
+        </member>
+        <member name="M:pessoa.api.Controllers.PessoasController.GetPessoa(System.Int64)">
+            <summary>
+            Este serviço permite obter uma pessoa usando o cpf dela
+            </summary>
+            <returns>Retorna status ok e dados da pessoa consultada</returns>
+        </member>
+        <member name="M:pessoa.api.Controllers.PessoasController.PutPessoa(System.Int64,pessoa.api.Model.Pessoa.AtualizarPessoaViewModelInput)">
+            <summary>
+            Este serviço permite atualizar uma pessoa.
+            </summary>
+            <returns>Retorna status 201 e dados da pessoa</returns>
+        </member>
+        <member name="M:pessoa.api.Controllers.PessoasController.DeletarPessoa(System.Int64)">
+            <summary>
+            Este serviço permite deletar uma pessoa usando o cpf dela
+            </summary>
+            <returns>Retorna status ok</returns>
+        </member>
+    </members>
+</doc>
